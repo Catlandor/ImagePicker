@@ -2,12 +2,12 @@ package com.github.drjacky.imagepicker.util
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 import com.github.drjacky.imagepicker.R
 import com.github.drjacky.imagepicker.constant.ImageProvider
 import com.github.drjacky.imagepicker.listener.DismissListener
 import com.github.drjacky.imagepicker.listener.ResultListener
-import kotlinx.android.synthetic.main.dialog_choose_app.view.*
 
 /**
  * Show Dialog
@@ -46,13 +46,13 @@ internal object DialogHelper {
             .show()
 
         // Handle Camera option click
-        customView.lytCameraPick.setOnClickListener {
+        customView.findViewById<LinearLayout>(R.id.lytCameraPick).setOnClickListener {
             listener.onResult(ImageProvider.CAMERA)
             dialog.dismiss()
         }
 
         // Handle Gallery option click
-        customView.lytGalleryPick.setOnClickListener {
+        customView.findViewById<LinearLayout>(R.id.lytGalleryPick).setOnClickListener {
             listener.onResult(ImageProvider.GALLERY)
             dialog.dismiss()
         }

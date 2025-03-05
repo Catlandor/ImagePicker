@@ -71,6 +71,7 @@ class CameraProvider(
      */
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         // Restore Camera File
+        @Suppress("DEPRECATION")
         mCameraUri = savedInstanceState?.getParcelable(STATE_CAMERA_URI) as Uri?
     }
 
@@ -160,7 +161,7 @@ class CameraProvider(
      *
      * After Camera Image Crop/Compress Original File will not required
      */
-    fun delete() {
+    private fun delete() {
         mCameraUri?.path?.let {
             File(it).delete()
         }

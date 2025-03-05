@@ -57,12 +57,7 @@ open class ImagePicker {
          */
         @JvmStatic
         fun getError(data: Intent?): String {
-            val error = data?.getStringExtra(EXTRA_ERROR)
-            if (error != null) {
-                return error
-            } else {
-                return "Unknown Error!"
-            }
+            return data?.getStringExtra(EXTRA_ERROR) ?: "Unknown Error!"
         }
 
         /**
@@ -75,6 +70,7 @@ open class ImagePicker {
 
         @JvmStatic
         fun getAllFilePath(data: Intent?): ArrayList<Uri>? {
+            @Suppress("DEPRECATION")
             return data?.getParcelableArrayListExtra(MULTIPLE_FILES_PATH)
         }
 

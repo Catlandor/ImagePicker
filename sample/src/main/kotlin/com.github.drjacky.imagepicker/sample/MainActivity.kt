@@ -7,20 +7,18 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageView
 import com.github.drjacky.imagepicker.ImagePicker
 import com.github.drjacky.imagepicker.constant.ImageProvider
 import com.github.drjacky.imagepicker.sample.util.FileUtil
 import com.github.drjacky.imagepicker.sample.util.IntentUtil
 import com.github.drjacky.imagepicker.util.IntentUtils
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_camera_only.*
-import kotlinx.android.synthetic.main.content_gallery_only.*
-import kotlinx.android.synthetic.main.content_profile.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             if (it.resultCode == Activity.RESULT_OK) {
                 val uri = it.data?.data!!
                 mProfileUri = uri
-                imgProfile.setLocalImage(uri, true)
+                findViewById<AppCompatImageView>(R.id.imgProfile).setLocalImage(uri, true)
             } else {
                 parseError(it)
             }
@@ -45,16 +43,17 @@ class MainActivity : AppCompatActivity() {
     private val galleryLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == Activity.RESULT_OK) {
+                val imgGalleryView = findViewById<AppCompatImageView>(R.id.imgGallery)
                 if (it.data?.hasExtra(ImagePicker.EXTRA_FILE_PATH)!!) {
                     val uri = it.data?.data!!
                     mGalleryUri = uri
-                    imgGallery.setLocalImage(uri)
+                    imgGalleryView.setLocalImage(uri)
                 } else if (it.data?.hasExtra(ImagePicker.MULTIPLE_FILES_PATH)!!) {
                     val files = ImagePicker.getAllFile(it.data) as ArrayList<Uri>
                     if (files.size > 0) {
                         val uri = files[0] // first image
                         mGalleryUri = uri
-                        imgGallery.setLocalImage(uri)
+                        imgGalleryView.setLocalImage(uri)
                     }
                 } else {
                     parseError(it)
@@ -69,7 +68,7 @@ class MainActivity : AppCompatActivity() {
             if (it.resultCode == Activity.RESULT_OK) {
                 val uri = it.data?.data!!
                 mCameraUri = uri
-                imgCamera.setLocalImage(uri, false)
+                findViewById<AppCompatImageView>(R.id.imgCamera).setLocalImage(uri, false)
             } else {
                 parseError(it)
             }
@@ -87,8 +86,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-        imgProfile.setDrawableImage(R.drawable.ic_person, true)
+        setSupportActionBar(findViewById(R.id.toolbar))
+        findViewById<ImageView>(R.id.imgProfile).setDrawableImage(R.drawable.ic_person, true)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -149,9 +148,9 @@ class MainActivity : AppCompatActivity() {
 
     fun showImage(view: View) {
         val uri = when (view) {
-            imgProfile -> mProfileUri
-            imgCamera -> mCameraUri
-            imgGallery -> mGalleryUri
+            findViewById<AppCompatImageView>(R.id.imgProfile) -> mProfileUri
+            findViewById<AppCompatImageView>(R.id.imgCamera) -> mCameraUri
+            findViewById<AppCompatImageView>(R.id.imgGallery) -> mGalleryUri
             else -> null
         }
 
@@ -162,9 +161,9 @@ class MainActivity : AppCompatActivity() {
 
     fun showImageInfo(view: View) {
         val uri = when (view) {
-            imgProfileInfo -> mProfileUri
-            imgCameraInfo -> mCameraUri
-            imgGalleryInfo -> mGalleryUri
+            findViewById<AppCompatImageView>(R.id.imgProfileInfo) -> mProfileUri
+            findViewById<AppCompatImageView>(R.id.imgCameraInfo) -> mCameraUri
+            findViewById<AppCompatImageView>(R.id.imgGalleryInfo) -> mGalleryUri
             else -> null
         }
 
