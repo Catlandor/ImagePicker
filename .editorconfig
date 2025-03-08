@@ -1,4 +1,6 @@
 root = true
 
-[*.{kt, kts}]
-ktlint_disabled_rules = no-wildcard-imports, no-blank-line-before-rbrace, no-blank-lines-in-chained-method-calls
+ktlint_standard_final-newline = disabled # Disables the `final-newline` rule provided by KtLint
+ktlint_standard_trailing-comma-on-declaration-site = disabled
+ktlint_standard_function-literal = disabled
+ktlint_standard_function-literal = disabled

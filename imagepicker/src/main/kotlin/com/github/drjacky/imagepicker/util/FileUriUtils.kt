@@ -212,7 +212,7 @@ object FileUriUtils {
             null
         }
 
-        if (extension == null || extension.isEmpty()) {
+        if (extension.isNullOrEmpty()) {
             // default extension for matches the previous behavior of the plugin
             extension = "jpg"
         }

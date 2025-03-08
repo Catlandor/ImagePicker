@@ -11,7 +11,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import androidx.activity.result.ActivityResult
-import androidx.annotation.Nullable
 import com.github.drjacky.imagepicker.ImagePicker
 import com.github.drjacky.imagepicker.ImagePickerActivity
 import com.github.drjacky.imagepicker.R
@@ -34,7 +33,6 @@ class CropProvider(activity: ImagePickerActivity, private val launcher: (Intent)
     BaseProvider(activity) {
 
     companion object {
-        private val TAG = CropProvider::class.java.simpleName
         private const val STATE_CROP_URI = "state.crop_uri"
     }
 
@@ -60,6 +58,7 @@ class CropProvider(activity: ImagePickerActivity, private val launcher: (Intent)
             cropFreeStyle = getBoolean(ImagePicker.EXTRA_CROP_FREE_STYLE, false)
             cropAspectX = getFloat(ImagePicker.EXTRA_CROP_X, 0f)
             cropAspectY = getFloat(ImagePicker.EXTRA_CROP_Y, 0f)
+            @Suppress("DEPRECATION")
             outputFormat = this.get(ImagePicker.EXTRA_OUTPUT_FORMAT) as? Bitmap.CompressFormat
         }
     }
@@ -82,6 +81,7 @@ class CropProvider(activity: ImagePickerActivity, private val launcher: (Intent)
      * Retrieve CropProvider state
      */
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        @Suppress("DEPRECATION")
         cropImageUri = savedInstanceState?.getParcelable(STATE_CROP_URI) as Uri?
     }
 
@@ -109,7 +109,6 @@ class CropProvider(activity: ImagePickerActivity, private val launcher: (Intent)
      *
      * @return Bitmap.CompressFormat?. In case of Null, it will use the extension from the input file
      */
-    @Nullable
     fun outputFormat() = outputFormat
 
     /**
@@ -255,7 +254,7 @@ class CropProvider(activity: ImagePickerActivity, private val launcher: (Intent)
      *
      * After Image Compression, Crop File will not required
      */
-    fun delete() {
+    private fun delete() {
         cropImageUri?.path?.let {
             File(it).delete()
         }

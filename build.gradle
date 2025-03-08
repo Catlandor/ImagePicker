@@ -1,7 +1,7 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.7.21'
+        kotlin_version = '2.1.10'
         versionCode = 42
         versionName = '2.3.22'
     }
@@ -11,9 +11,11 @@ buildscript {
         mavenCentral()
         maven { url 'https://plugins.gradle.org/m2/' }
         maven { url "https://jitpack.io" }
+        // For org.codehaus.groovy.modules http-builder
+        maven { url 'https://repo.grails.org/grails/core/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.9.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         //jcenter plugins
@@ -28,15 +30,19 @@ allprojects {
         mavenCentral()
         maven { url 'https://plugins.gradle.org/m2/' }
         maven { url "https://jitpack.io" }
+        // For org.codehaus.groovy.modules http-builder
+        maven { url 'https://repo.grails.org/grails/core/' }
     }
 
     // Avoid Kotlin docs error
-    tasks.withType(Javadoc) {
-        enabled = false
+    tasks.withType(Javadoc).tap {
+        configureEach {
+            enabled = false
+        }
     }
 
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
