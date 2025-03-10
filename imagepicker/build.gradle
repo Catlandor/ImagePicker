@@ -58,12 +58,7 @@ dependencies {
 }
 
 ext {
-    PUBLISH_GROUP_ID = 'io.github.catlandor'
     PUBLISH_VERSION = rootProject.ext.versionName
-    PUBLISH_ARTIFACT_ID = 'ImagePicker'
-
-    bintrayRepo = 'ImagePicker'
-    bintrayName = 'ImagePicker'
 
     publishedGroupId = 'io.github.catlandor'
     libraryName = 'ImagePicker'
@@ -71,14 +66,9 @@ ext {
 
     libraryDescription = 'Pick image from Gallery or Capture new image with Camera.'
 
-    siteUrl = 'https://github.com/Catlandor/ImagePicker'
     issueUrl = 'https://github.com/Catlandor/ImagePicker/issues'
-    gitUrl = 'https://github.com/Catlandor/ImagePicker.git'
 
     libraryVersion = rootProject.ext.versionName
-
-    developerId = 'catlandor'
-    developerEmail = 'catlandor.dev@gmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
