@@ -10,13 +10,13 @@ A user-friendly and configurable library to **pick an image from the gallery or 
 
 ## 👾 Features
 
-* Choose and pick from your gallery images
-* Pick images from the Google Drive
-* Capture camera images
-* Crop images (crop image based on provided aspect ratio or let the user choose)
-* Compress images (compress image based on provided resolution and size)
-* Retrieve image result as file, file Path as String or Uri object
-* Handle runtime permission for camera and storage
+- Choose and pick from your gallery images
+- Pick images from Google Drive
+- Capture camera images
+- Crop images (crop image based on provided aspect ratio or let the user choose)
+- Compress images (compress image based on provided resolution and size)
+- Retrieve image result as file, file path as String, or Uri object
+- Handle runtime permission for camera and storage
 
 ## 🎬 Preview
 
@@ -25,19 +25,22 @@ A user-friendly and configurable library to **pick an image from the gallery or 
 |:----------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
 | ![](https://github.com/Drjacky/ImagePicker/blob/master/art/imagepicker_profile_demo.gif) | ![](https://github.com/Drjacky/ImagePicker/blob/master/art/imagepicker_gallery_demo.gif) | ![](https://github.com/Drjacky/ImagePicker/blob/master/art/imagepicker_camera_demo.gif) |
 
-## 💻 Usage
+## 💻 Installation
 
+### Gradle
 
-Gradle dependency:
+Add the following to your project's `build.gradle`:
 
 ```groovy
 	allprojects {
 	   repositories {
-	      	mavenCentral() // For ImagePicker library, this line is enough. Although, it has been published on jitpack as well
-           	maven { url "https://jitpack.io" }  //Make sure to add this in your project for uCrop - an internal library
+	      	mavenCentral() // For ImagePicker library
+           	maven { url "https://jitpack.io" }  // For uCrop - an internal library
 	   }
 	}
 ```
+
+Add the dependency to your app's build.gradle:
 
 ```groovy
    implementation 'io.github.catlandor:ImagePicker:$libVersion'
@@ -46,11 +49,11 @@ Gradle dependency:
 Where `$libVersion`
 = [![libVersion](https://img.shields.io/github/release/catlandor/imagePicker/all.svg?style=flat-square)](https://github.com/catlandor/ImagePicker/releases)
 
-## 🎨 Customization
+## 💻 Usage
 
-**If you want to get the activity result:**
+### Kotlin
 
-**Kotlin**
+1. Register for activity result:
 
 ```kotlin
    private val launcher =
@@ -69,7 +72,17 @@ Where `$libVersion`
     }
 ```
 
-**Java**
+2. Launch ImagePicker:
+
+```kotlin
+ImagePicker.with(this)
+    .provider(ImageProvider.BOTH)
+    .createIntentFromDialog { launcher.launch(it) }
+```
+
+### Java
+
+1. Register for activity result:
 
 ```java
 ActivityResultLauncher<Intent> launcher=
@@ -83,6 +96,16 @@ ActivityResultLauncher<Intent> launcher=
         });
 ```
 
+2. Launch ImagePicker:
+
+```java
+ImagePicker.Companion.with(this)
+    .provider(ImageProvider.BOTH)
+    .createIntentFromDialog(it -> launcher.launch(it));
+```
+
+## 🎨 Customization
+
 **Both Camera and Gallery:**
 
 ```kotlin
@@ -92,36 +115,16 @@ ActivityResultLauncher<Intent> launcher=
     .createIntentFromDialog { launcher.launch(it) }
 ```
 
-**Crop image:**
+- **Crop image:** `.crop()`
+- **Crop image with 16:9 aspect ratio:** `.crop(16f, 9f)`
+- **Crop square image:** `.cropSquare()`
+- **Oval crop image:** `.crop().cropOval()`
+- **Set max width and height of final image:** `.maxResultSize(512, 512, true)`
+- **Let the user resize crop bounds:** `.crop().cropFreeStyle()`
+- **Allow multiple file selection:** `.setMultipleAllowed(true)`
+- **Set output format:** `.setOutputFormat(Bitmap.CompressFormat.WEBP)`
+- **Limit MIME types:** `.galleryMimeTypes(mimeTypes = arrayOf("image/png", "image/jpg", "image/jpeg"))`
 
-```kotlin
-    .crop()
-```
-
-**Crop image with 16:9 aspect ratio:**
-
-```kotlin
-    .crop(16f, 9f)
-```
-
-**Crop square image(e.g for profile):**
-
-```kotlin
-    .cropSquare()    //Crop square image, its same as crop(1f, 1f)
-```
-
-**Oval crop image:**
-
-```kotlin
-    .crop()     
-    .cropOval() //Allow dimmed layer to have a circle inside
-```
-
-**Set Max Width and Height of final image:**
-
-```kotlin
-    .maxResultSize(512, 512, true) //true: Keep Ratio
-```
 
 **Java sample for using `createIntentFromDialog`:**
 
@@ -162,18 +165,6 @@ public final void invoke(@NotNull Intent it){
         .cropFreeStyle()
 ```
 
-**Let the user to pick multiple files or single file in gallery mode:**
-
-```kotlin
-        .setMultipleAllowed(true)
-```
-
-**Let the user defines the output format:**
-
-```kotlin
-        .setOutputFormat(Bitmap.CompressFormat.WEBP)
-```
-
 **Intercept ImageProvider; could be used for analytics purposes:**
 
 ```kotlin
@@ -184,7 +175,7 @@ ImagePicker.with(this)
         .createIntent()
 ```
 
-**Intercept Dialog dismiss event:**
+**Intercept dialog dismiss event:**
 
 ```kotlin
     ImagePicker.with(this)
@@ -223,7 +214,7 @@ ImagePicker.with(this)
   * Library - Android Lollipop (API 21)
   * Sample - Android Lollipop (API 21)
 
-## 📃 Libraries Used
+## 📃 Used Libraries
 * uCrop-n-Edit [https://github.com/jens-muenker/uCrop-n-Edit](https://github.com/jens-muenker/uCrop-n-Edit)
 * Compressor [https://github.com/zetbaitsu/Compressor](https://github.com/zetbaitsu/Compressor)
 * ImagePicker original repository [https://github.com/Dhaval2404/ImagePicker](https://github.com/Dhaval2404/ImagePicker)

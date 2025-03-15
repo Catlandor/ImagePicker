@@ -19,7 +19,6 @@
             android:id="@+id/imgCameraInfo"
             style="@style/ImageButtonStyle"
             android:layout_alignParentEnd="true"
-            android:onClick="showImageInfo"
             app:srcCompat="@drawable/outline_info_24" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -34,7 +33,6 @@
             android:layout_height="match_parent"
             android:layout_below="@id/txtCamera"
             android:background="@color/grey_50"
-            android:onClick="showImage"
             android:scaleType="centerCrop" />
 
     </RelativeLayout>
@@ -42,7 +40,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_camera_photo"
         style="@style/FabStyle"
-        android:onClick="pickCameraImage"
+        android:contentDescription="@string/set_camera_picture"
         app:srcCompat="@drawable/baseline_photo_camera_24" />
 
 </androidx.cardview.widget.CardView>
