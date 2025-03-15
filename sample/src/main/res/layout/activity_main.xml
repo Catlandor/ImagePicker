@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_250"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -21,6 +22,8 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include
+        android:id="@+id/content"
+        layout="@layout/content_main" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

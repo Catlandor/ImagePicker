@@ -19,7 +19,6 @@
             android:layout_gravity="center"
             android:layout_margin="16dp"
             android:background="@drawable/profile_bg"
-            android:onClick="showImage"
             android:padding="3dp"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/ic_person" />
@@ -29,7 +28,7 @@
             style="@style/FabStyle"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:onClick="pickProfileImage" />
+            android:contentDescription="@string/upload_a_profile_image" />
 
     </RelativeLayout>
 
@@ -39,7 +38,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:onClick="showImageInfo"
         app:srcCompat="@drawable/outline_info_24" />
 
 </RelativeLayout>
