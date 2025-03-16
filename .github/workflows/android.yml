@@ -100,7 +100,7 @@ jobs:
 
     - name: run tests
       if: steps.avd-cache.outputs.cache-hit != 'true'
-      uses: reactivecircus/android-emulator-runner@b683a061eaff4aac4d0b585bfd0cf714a40aee93
+      uses: reactivecircus/android-emulator-runner@50d5b10c0167135fd356722acdfaaef2542f8f1b
       with:
         api-level: ${{ matrix.api-level }}
         arch: ${{ matrix.arch }}
