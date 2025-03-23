@@ -1,36 +1,70 @@
-# [2.4.1]
+# ✔️ Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
+adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+<a id="2.4.1"></a>
+# [2.4.1](https://github.com/Catlandor/ImagePicker/releases/tag/2.4.1) - 2025-03-19
 
 ## Bug Fixes
-* Fix 'camera only' scenario without crop option by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/20
+* Fix 'camera only' scenario without crop option by [@Catlandor](https://github.com/Catlandor) in [#20](https://github.com/Catlandor/ImagePicker/pull/20)
 
-## Other Changes
-* Remove unnecessary permissions from test by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/15
-* Update README.md by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/16
-* Update README.md by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/17
-* Fix Ktlint issues by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/18
-* Add test for adding a profile image via gallery (mocked) by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/19
+## What's Changed
+* Remove unnecessary permissions from test by [@Catlandor](https://github.com/Catlandor) in [#15](https://github.com/Catlandor/ImagePicker/pull/15)
+* Update README.md by [@Catlandor](https://github.com/Catlandor) in [#16](https://github.com/Catlandor/ImagePicker/pull/16)
+* Update README.md by [@Catlandor](https://github.com/Catlandor) in [#17](https://github.com/Catlandor/ImagePicker/pull/17)
+* Fix Ktlint issues by [@Catlandor](https://github.com/Catlandor) in [#18](https://github.com/Catlandor/ImagePicker/pull/18)
+* Add test for adding a profile image via gallery (mocked) by [@Catlandor](https://github.com/Catlandor) in [#19](https://github.com/Catlandor/ImagePicker/pull/19)
 
-# [2.4.0]
+
+**Full Changelog**: https://github.com/Catlandor/ImagePicker/compare/2.4.0...2.4.1
+
+[Changes][2.4.1]
+
+
+<a id="2.4.0"></a>
+# [2.4.0](https://github.com/Catlandor/ImagePicker/releases/tag/2.4.0) - 2025-03-16
 
 ## New Features
-* Replace uCrop library: Full support with Android 15 and with more features by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/11
+* Replace uCrop library: Full support with Android 15 and with more features by [@Catlandor](https://github.com/Catlandor) in [#11](https://github.com/Catlandor/ImagePicker/pull/11)
 
-## Other Changes
-* Update plugin com.vanniktech.maven.publish to v0.31.0 by @renovate in https://github.com/Catlandor/ImagePicker/pull/13
-* Add test for 'ImageProvider.BOTH' option, refactored sample code by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/12
+## What's Changed
+* Update plugin com.vanniktech.maven.publish to v0.31.0 by [@renovate](https://github.com/renovate) in [#13](https://github.com/Catlandor/ImagePicker/pull/13)
+* Add test for 'ImageProvider.BOTH' option, refactored sample code by [@Catlandor](https://github.com/Catlandor) in [#12](https://github.com/Catlandor/ImagePicker/pull/12)
 
-# [2.3.23]
 
-* Fix release pipeline to Maven Central by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/10
-* Create build pipeline, upgrade Gradle 7.3 to 8.9 and more by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/1
-* Configure Renovate by @renovate in https://github.com/Catlandor/ImagePicker/pull/2
-* Update dependency com.github.yalantis:ucrop to v2.2.10 by @renovate in https://github.com/Catlandor/ImagePicker/pull/3
-* Update gradle/actions action to v4 by @renovate in https://github.com/Catlandor/ImagePicker/pull/4
-* Rename repository by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/5
-* Adjust project badges by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/7
-* Release pipeline by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/8
-* Release pipeline by @Catlandor in https://github.com/Catlandor/ImagePicker/pull/9
+**Full Changelog**: https://github.com/Catlandor/ImagePicker/compare/2.3.23...2.4.0
 
+[Changes][2.4.0]
+
+
+<a id="2.3.23"></a>
+# [2.3.23](https://github.com/Catlandor/ImagePicker/releases/tag/2.3.23) - 2025-03-13
+
+## What's Changed
+* Create build pipeline, upgrade Gradle 7.3 to 8.9 and more by [@Catlandor](https://github.com/Catlandor) in [#1](https://github.com/Catlandor/ImagePicker/pull/1)
+* Configure Renovate by [@renovate](https://github.com/renovate) in [#2](https://github.com/Catlandor/ImagePicker/pull/2)
+* Update dependency com.github.yalantis:ucrop to v2.2.10 by [@renovate](https://github.com/renovate) in [#3](https://github.com/Catlandor/ImagePicker/pull/3)
+* Update gradle/actions action to v4 by [@renovate](https://github.com/renovate) in [#4](https://github.com/Catlandor/ImagePicker/pull/4)
+* Rename repository by [@Catlandor](https://github.com/Catlandor) in [#5](https://github.com/Catlandor/ImagePicker/pull/5)
+* Adjust project badges by [@Catlandor](https://github.com/Catlandor) in [#7](https://github.com/Catlandor/ImagePicker/pull/7)
+* Release pipeline by [@Catlandor](https://github.com/Catlandor) in [#8](https://github.com/Catlandor/ImagePicker/pull/8)
+* Release pipeline by [@Catlandor](https://github.com/Catlandor) in [#9](https://github.com/Catlandor/ImagePicker/pull/9)
+* Fix release pipeline to Maven Central by [@Catlandor](https://github.com/Catlandor) in [#10](https://github.com/Catlandor/ImagePicker/pull/10)
+
+
+**Full Changelog**: https://github.com/Catlandor/ImagePicker/compare/2.3.20...2.3.23
+
+[Changes][2.3.23]
+
+
+[2.4.1]: https://github.com/Catlandor/ImagePicker/compare/2.4.0...2.4.1
+[2.4.0]: https://github.com/Catlandor/ImagePicker/compare/2.3.23...2.4.0
+[2.3.23]: https://github.com/Catlandor/ImagePicker/tree/2.3.23
+
+<!-- Generated by https://github.com/rhysd/changelog-from-release v3.9.0 -->
 # [2.3.22] - 2022-12-19
 
 * NullPointerException in callback (Special Thanks to [Catlandor](https://github.com/Catlandor))
@@ -393,9 +427,3 @@
 [1.1]: https://github.com/Dhaval2404/ImagePicker/compare/v1.0...v1.1
 [1.0]: https://github.com/Dhaval2404/ImagePicker/tree/v1.0
 
-# ✔️Changelog
-
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project
-adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
