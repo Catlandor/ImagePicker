@@ -8,6 +8,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 <a id="2.5.1"></a>
 # [2.5.1](https://github.com/Catlandor/ImagePicker/releases/tag/2.5.1) - 2025-08-16
 
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+
 ## What's Changed
 ### ✨ Improvements
 * [#72](https://github.com/Catlandor/ImagePicker/issues/72): Allow ImagePicker companion object for gallery / camera only options by [@Catlandor](https://github.com/Catlandor) in [#75](https://github.com/Catlandor/ImagePicker/pull/75)
@@ -49,6 +51,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 * Add cron job to clean-up stale issues by [@Catlandor](https://github.com/Catlandor) in [#36](https://github.com/Catlandor/ImagePicker/pull/36)
 * Temporarily downgrade version of vanniktech due to a known issue by [@Catlandor](https://github.com/Catlandor) in [#61](https://github.com/Catlandor/ImagePicker/pull/61)
 * Rename default branch from master to main by [@Catlandor](https://github.com/Catlandor) in [#63](https://github.com/Catlandor/ImagePicker/pull/63)
+* Bump version numbers by [@Catlandor](https://github.com/Catlandor) in [#77](https://github.com/Catlandor/ImagePicker/pull/77)
 
 
 **Full Changelog**: https://github.com/Catlandor/ImagePicker/compare/2.5.0...2.5.1
