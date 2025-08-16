@@ -5,6 +5,57 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+<a id="2.5.1"></a>
+# [2.5.1](https://github.com/Catlandor/ImagePicker/releases/tag/2.5.1) - 2025-08-16
+
+## What's Changed
+### ✨ Improvements
+* [#72](https://github.com/Catlandor/ImagePicker/issues/72): Allow ImagePicker companion object for gallery / camera only options by [@Catlandor](https://github.com/Catlandor) in [#75](https://github.com/Catlandor/ImagePicker/pull/75)
+### 📚 Documentation
+* Update README.md: Remove unnecessary `.crop()` calls by [@Catlandor](https://github.com/Catlandor) in [#33](https://github.com/Catlandor/ImagePicker/pull/33)
+### 🧩 Dependencies
+* Update reactivecircus/android-emulator-runner digest to v2 by [@Catlandor](https://github.com/Catlandor) in [#35](https://github.com/Catlandor/ImagePicker/pull/35)
+* Update dependency androidx.core:core-ktx to v1.16.0 by [@renovate](https://github.com/renovate)[bot] in [#37](https://github.com/Catlandor/ImagePicker/pull/37)
+* Update dependency com.android.tools.build:gradle to v8.9.2 by [@renovate](https://github.com/renovate)[bot] in [#38](https://github.com/Catlandor/ImagePicker/pull/38)
+* Update dependency androidx.exifinterface:exifinterface to v1.4.1 by [@renovate](https://github.com/renovate)[bot] in [#39](https://github.com/Catlandor/ImagePicker/pull/39)
+* Update dependency gradle to v8.14 by [@renovate](https://github.com/renovate)[bot] in [#40](https://github.com/Catlandor/ImagePicker/pull/40)
+* Update dependency com.android.tools.build:gradle to v8.10.0 by [@renovate](https://github.com/renovate)[bot] in [#41](https://github.com/Catlandor/ImagePicker/pull/41)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#42](https://github.com/Catlandor/ImagePicker/pull/42)
+* Update non-major packages to v2.1.21 by [@renovate](https://github.com/renovate)[bot] in [#43](https://github.com/Catlandor/ImagePicker/pull/43)
+* Update plugin com.vanniktech.maven.publish to v0.32.0 by [@renovate](https://github.com/renovate)[bot] in [#44](https://github.com/Catlandor/ImagePicker/pull/44)
+* Update dependency com.pinterest.ktlint:ktlint-cli to v1.6.0 by [@renovate](https://github.com/renovate)[bot] in [#45](https://github.com/Catlandor/ImagePicker/pull/45)
+* Update dependency androidx.fragment:fragment-ktx to v1.8.7 by [@renovate](https://github.com/renovate)[bot] in [#46](https://github.com/Catlandor/ImagePicker/pull/46)
+* Update dependency gradle to v8.14.1 by [@renovate](https://github.com/renovate)[bot] in [#47](https://github.com/Catlandor/ImagePicker/pull/47)
+* Update dependency com.android.tools.build:gradle to v8.10.1 by [@renovate](https://github.com/renovate)[bot] in [#49](https://github.com/Catlandor/ImagePicker/pull/49)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#50](https://github.com/Catlandor/ImagePicker/pull/50)
+* Update dependency gradle to v8.14.2 by [@renovate](https://github.com/renovate)[bot] in [#51](https://github.com/Catlandor/ImagePicker/pull/51)
+* Update plugin com.vanniktech.maven.publish to v0.33.0 by [@renovate](https://github.com/renovate)[bot] in [#52](https://github.com/Catlandor/ImagePicker/pull/52)
+* Update dependency org.jetbrains.kotlin:kotlin-gradle-plugin to v2.2.0 by [@renovate](https://github.com/renovate)[bot] in [#53](https://github.com/Catlandor/ImagePicker/pull/53)
+* Update dependency org.jetbrains.kotlin:kotlin-stdlib-jdk8 to v2.2.0 by [@renovate](https://github.com/renovate)[bot] in [#54](https://github.com/Catlandor/ImagePicker/pull/54)
+* Update dependency com.android.tools.build:gradle to v8.11.0 by [@renovate](https://github.com/renovate)[bot] in [#55](https://github.com/Catlandor/ImagePicker/pull/55)
+* Update dependency gradle to v8.14.3 by [@renovate](https://github.com/renovate)[bot] in [#56](https://github.com/Catlandor/ImagePicker/pull/56)
+* Update dependency com.android.tools.build:gradle to v8.11.1 by [@renovate](https://github.com/renovate)[bot] in [#58](https://github.com/Catlandor/ImagePicker/pull/58)
+* Update plugin com.vanniktech.maven.publish to v0.34.0 by [@renovate](https://github.com/renovate)[bot] in [#59](https://github.com/Catlandor/ImagePicker/pull/59)
+* Update dependency com.pinterest.ktlint:ktlint-cli to v1.7.0 by [@renovate](https://github.com/renovate)[bot] in [#60](https://github.com/Catlandor/ImagePicker/pull/60)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#65](https://github.com/Catlandor/ImagePicker/pull/65)
+* Update dependency com.pinterest.ktlint:ktlint-cli to v1.7.1 by [@renovate](https://github.com/renovate)[bot] in [#66](https://github.com/Catlandor/ImagePicker/pull/66)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#68](https://github.com/Catlandor/ImagePicker/pull/68)
+* Update dependency com.android.tools.build:gradle to v8.12.0 by [@renovate](https://github.com/renovate)[bot] in [#69](https://github.com/Catlandor/ImagePicker/pull/69)
+* Update dependency androidx.test:rules to v1.7.0 by [@renovate](https://github.com/renovate)[bot] in [#71](https://github.com/Catlandor/ImagePicker/pull/71)
+* Update all dependencies by [@renovate](https://github.com/renovate)[bot] in [#70](https://github.com/Catlandor/ImagePicker/pull/70)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#73](https://github.com/Catlandor/ImagePicker/pull/73)
+* Update non-major packages to v2.2.10 by [@renovate](https://github.com/renovate)[bot] in [#74](https://github.com/Catlandor/ImagePicker/pull/74)
+### 🪅 Other Changes
+* Add cron job to clean-up stale issues by [@Catlandor](https://github.com/Catlandor) in [#36](https://github.com/Catlandor/ImagePicker/pull/36)
+* Temporarily downgrade version of vanniktech due to a known issue by [@Catlandor](https://github.com/Catlandor) in [#61](https://github.com/Catlandor/ImagePicker/pull/61)
+* Rename default branch from master to main by [@Catlandor](https://github.com/Catlandor) in [#63](https://github.com/Catlandor/ImagePicker/pull/63)
+
+
+**Full Changelog**: https://github.com/Catlandor/ImagePicker/compare/2.5.0...2.5.1
+
+[Changes][2.5.1]
+
+
 <a id="2.5.0"></a>
 # [2.5.0](https://github.com/Catlandor/ImagePicker/releases/tag/2.5.0) - 2025-03-25
 
@@ -87,6 +138,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 [Changes][2.3.23]
 
 
+[2.5.1]: https://github.com/Catlandor/ImagePicker/compare/2.5.0...2.5.1
 [2.5.0]: https://github.com/Catlandor/ImagePicker/compare/2.4.1...2.5.0
 [2.4.1]: https://github.com/Catlandor/ImagePicker/compare/2.4.0...2.4.1
 [2.4.0]: https://github.com/Catlandor/ImagePicker/compare/2.3.23...2.4.0
