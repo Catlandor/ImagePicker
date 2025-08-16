@@ -86,6 +86,16 @@ ImagePicker
     .createIntentFromDialog { launcher.launch(it) }
 ```
 
+or (for `cameraOnly` and `galleryOnly`):
+
+```kotlin
+launcher.launch(
+    ImagePicker
+        .with(this)
+        .provider(ImageProvider.CAMERA)
+        .createIntent())
+```
+
 ### Java
 
 1. Register for activity result:
