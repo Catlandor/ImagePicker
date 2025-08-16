@@ -1,5 +1,6 @@
 package io.github.catlandor.imagepicker
 
+import android.util.Log
 import android.widget.ImageView
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions
@@ -13,6 +14,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.Until
+import io.github.catlandor.imagepicker.constant.ImageProvider
 import io.github.catlandor.imagepicker.sample.MainActivity
 import io.github.catlandor.imagepicker.sample.R
 import org.junit.After
@@ -55,6 +57,25 @@ class CameraWithoutCropTests {
             )
         }
 
+        performCameraAssertions()
+    }
+
+    @Test
+    fun cameraLauncher_WithImagePicker_ActionPerformed() {
+        activityScenarioRule.scenario.onActivity { activity: MainActivity ->
+            ImagePicker
+                .with(activity)
+                .maxResultSize(512, 512, true)
+                .provider(ImageProvider.CAMERA)
+                .setDismissListener {
+                    Log.d("ImagePicker", "onDismiss")
+                }.createIntentFromDialog { activity.cameraLauncher.launch(it) }
+        }
+
+        performCameraAssertions()
+    }
+
+    private fun performCameraAssertions() {
         TestUtils.tryClickCameraLocationAllowButton(
             device,
             threadTimeout,

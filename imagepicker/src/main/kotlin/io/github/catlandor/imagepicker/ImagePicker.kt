@@ -285,6 +285,9 @@ open class ImagePicker {
                         },
                     dismissListener
                 )
+            } else if (imageProvider == ImageProvider.CAMERA || imageProvider == ImageProvider.GALLERY) {
+                imageProviderInterceptor?.invoke(imageProvider)
+                onResult(createIntent())
             }
         }
 
