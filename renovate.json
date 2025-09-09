@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended",
     "group:all",
-    ":dependencyDashboard",
+    ":disableDependencyDashboard",
     "schedule:earlyMondays"
   ],
   "rebaseWhen": "behind-base-branch",
