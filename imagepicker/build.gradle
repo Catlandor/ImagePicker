@@ -51,7 +51,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.exifinterface:exifinterface:1.4.1'
     implementation 'androidx.documentfile:documentfile:1.1.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.3'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.4'
     implementation 'androidx.fragment:fragment-ktx:1.8.9'
 
     // See GitHub repo: https://github.com/jens-muenker/uCrop-n-Edit
