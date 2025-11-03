@@ -55,7 +55,7 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.8.9'
 
     // See GitHub repo: https://github.com/jens-muenker/uCrop-n-Edit
-    api 'com.github.jens-muenker:uCrop-n-Edit:4.1.0'
+    api 'com.github.jens-muenker:uCrop-n-Edit:4.1.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.3.0'
