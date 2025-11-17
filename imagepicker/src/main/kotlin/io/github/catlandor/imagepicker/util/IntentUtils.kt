@@ -114,11 +114,12 @@ object IntentUtils {
                 }
 
                 // Tested API 21 Android version 5.0.1(Samsung S4)
-                else ->
+                else -> {
                     intent.putExtra(
                         CAMERA_FACING_EXTRA,
                         1
                     )
+                }
             }
         }
 

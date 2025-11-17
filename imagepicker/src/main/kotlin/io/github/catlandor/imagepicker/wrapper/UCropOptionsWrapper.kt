@@ -15,26 +15,38 @@ class UCropOptionsWrapper(val options: UCrop.Options) : Parcelable {
                 field.isAccessible = true
                 try {
                     when (field.type) {
-                        Int::class.java -> field.setInt(this, parcel.readInt())
-                        Float::class.java -> field.setFloat(this, parcel.readFloat())
-                        Boolean::class.java ->
+                        Int::class.java -> {
+                            field.setInt(this, parcel.readInt())
+                        }
+
+                        Float::class.java -> {
+                            field.setFloat(this, parcel.readFloat())
+                        }
+
+                        Boolean::class.java -> {
                             field.setBoolean(
                                 this,
                                 parcel.readByte().toInt() != 0
                             )
+                        }
 
-                        String::class.java -> field.set(this, parcel.readString())
-                        Bitmap.CompressFormat::class.java ->
+                        String::class.java -> {
+                            field.set(this, parcel.readString())
+                        }
+
+                        Bitmap.CompressFormat::class.java -> {
                             field.set(
                                 this,
                                 parcel.readSerializable() as Bitmap.CompressFormat?
                             )
+                        }
 
-                        Bundle::class.java ->
+                        Bundle::class.java -> {
                             field.set(
                                 this,
                                 parcel.readBundle(Bundle::class.java.classLoader)
                             )
+                        }
                     }
                 } catch (e: IllegalArgumentException) {
                     // Skip unsupported fields
