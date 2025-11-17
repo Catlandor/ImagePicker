@@ -165,21 +165,25 @@ class ImagePickerActivity : AppCompatActivity() {
     fun setImage(uri: Uri, isCamera: Boolean) {
         mImageUri = uri
         when {
-            mCropProvider.isCropEnabled() ->
+            mCropProvider.isCropEnabled() -> {
                 mCropProvider.startIntent(
                     uri = uri,
                     isCamera = isCamera,
                     isMultipleFiles = false,
                     outputFormat = mCropProvider.outputFormat()
                 )
+            }
 
-            mCompressionProvider.isResizeRequired(uri) ->
+            mCompressionProvider.isResizeRequired(uri) -> {
                 mCompressionProvider.compress(
                     uri = uri,
                     outputFormat = mCropProvider.outputFormat()
                 )
+            }
 
-            else -> setResult(uri)
+            else -> {
+                setResult(uri)
+            }
         }
     }
 
@@ -200,19 +204,21 @@ class ImagePickerActivity : AppCompatActivity() {
     private fun setMultipleCropper(uri: Uri) {
         mImageUri = uri
         when {
-            mCropProvider.isCropEnabled() ->
+            mCropProvider.isCropEnabled() -> {
                 mCropProvider.startIntent(
                     uri = uri,
                     isCamera = false,
                     isMultipleFiles = true,
                     outputFormat = mCropProvider.outputFormat()
                 )
+            }
 
-            mCompressionProvider.isResizeRequired(uri) ->
+            mCompressionProvider.isResizeRequired(uri) -> {
                 mCompressionProvider.compress(
                     uri = uri,
                     outputFormat = mCropProvider.outputFormat()
                 )
+            }
         }
     }
 

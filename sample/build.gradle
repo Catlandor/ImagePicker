@@ -67,7 +67,7 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17
     }
-    lintOptions{
+    lintOptions {
         disable 'MissingTranslation'
     }
     namespace 'io.github.catlandor.imagepicker.sample'
