@@ -31,7 +31,7 @@ android {
     defaultConfig {
         signingConfig signingConfigs.debug
         applicationId "io.github.catlandor.imagepicker.sample"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 36
         multiDexEnabled true
         versionCode rootProject.ext.versionCode

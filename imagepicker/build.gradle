@@ -12,7 +12,7 @@ android {
     compileSdk 36
     defaultConfig {
         multiDexEnabled true
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 36
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -51,7 +51,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.exifinterface:exifinterface:1.4.1'
     implementation 'androidx.documentfile:documentfile:1.1.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.4'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0'
     implementation 'androidx.fragment:fragment-ktx:1.8.9'
 
     // See GitHub repo: https://github.com/jens-muenker/uCrop-n-Edit
