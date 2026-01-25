@@ -248,8 +248,8 @@ ImagePicker
 
 ## 💥 Compatibility
 
-  * Library - Android Lollipop (API 21)
-  * Sample - Android Lollipop (API 21)
+  * Library - Android Marshmallow (API 23)
+  * Sample - Android Marshmallow (API 23)
 
 ## 📃 Used Libraries
 * uCrop-n-Edit [https://github.com/jens-muenker/uCrop-n-Edit](https://github.com/jens-muenker/uCrop-n-Edit)
