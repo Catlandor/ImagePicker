@@ -5,10 +5,59 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+<a id="3.0.0"></a>
+# [3.0.0](https://github.com/Catlandor/ImagePicker/releases/tag/3.0.0) - 2026-01-25
+
+## What's Changed
+### 👾 Features
+* [uCrop-n-Edit](https://github.com/jens-muenker/uCrop-n-Edit) version upgrade, which enables to set a custom color for the background of the progress wheel.
+
+Example:
+```
+.withUCropOptions { options ->
+    options.setWrapperControlsColor(ContextCompat.getColor(this, R.color.purple_500))
+}
+```
+or:
+```
+<!-- Background color of the progress wheel -->
+<color name="ucrop_color_wrapper_controls">@color/purple_500</color>
+```
+### 📚 Documentation
+* Disable Renovate dependency dashboard by [@Catlandor](https://github.com/Catlandor) in [#84](https://github.com/Catlandor/ImagePicker/pull/84)
+### 🧩 Dependencies
+* Update dependency com.android.tools.build:gradle to v8.12.1 by [@renovate](https://github.com/renovate)[bot] in [#79](https://github.com/Catlandor/ImagePicker/pull/79)
+* Adjust Renovate schedule by [@Catlandor](https://github.com/Catlandor) in [#80](https://github.com/Catlandor/ImagePicker/pull/80)
+* Update actions/setup-java action to v5 by [@renovate](https://github.com/renovate)[bot] in [#81](https://github.com/Catlandor/ImagePicker/pull/81)
+* Update all dependencies by [@renovate](https://github.com/renovate)[bot] in [#83](https://github.com/Catlandor/ImagePicker/pull/83)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#82](https://github.com/Catlandor/ImagePicker/pull/82)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#85](https://github.com/Catlandor/ImagePicker/pull/85)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#86](https://github.com/Catlandor/ImagePicker/pull/86)
+* Update gradle/actions action to v5 by [@renovate](https://github.com/renovate)[bot] in [#87](https://github.com/Catlandor/ImagePicker/pull/87)
+* Update non-major packages to v2.2.21 by [@renovate](https://github.com/renovate)[bot] in [#88](https://github.com/Catlandor/ImagePicker/pull/88)
+* Update actions/upload-artifact action to v5 by [@renovate](https://github.com/renovate)[bot] in [#89](https://github.com/Catlandor/ImagePicker/pull/89)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#90](https://github.com/Catlandor/ImagePicker/pull/90)
+* Update mikepenz/action-junit-report action to v6 by [@renovate](https://github.com/renovate)[bot] in [#91](https://github.com/Catlandor/ImagePicker/pull/91)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#92](https://github.com/Catlandor/ImagePicker/pull/92)
+* Update actions/checkout action to v6 by [@renovate](https://github.com/renovate)[bot] in [#95](https://github.com/Catlandor/ImagePicker/pull/95)
+* Update gradle and lifecycle, increase minSdkVersion from 21 to 23 by [@renovate](https://github.com/renovate)[bot] in [#94](https://github.com/Catlandor/ImagePicker/pull/94)
+* Update dependency androidx.exifinterface:exifinterface to v1.4.2 by [@renovate](https://github.com/renovate)[bot] in [#97](https://github.com/Catlandor/ImagePicker/pull/97)
+* Update dependency com.android.tools.build:gradle to v8.13.2 by [@renovate](https://github.com/renovate)[bot] in [#98](https://github.com/Catlandor/ImagePicker/pull/98)
+* Update actions/upload-artifact action to v6 by [@renovate](https://github.com/renovate)[bot] in [#99](https://github.com/Catlandor/ImagePicker/pull/99)
+* Update non-major packages to v2.3.0 by [@renovate](https://github.com/renovate)[bot] in [#100](https://github.com/Catlandor/ImagePicker/pull/100)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#101](https://github.com/Catlandor/ImagePicker/pull/101)
+* Update dependency com.android.tools.build:gradle to v9 by [@renovate](https://github.com/renovate)[bot] in [#102](https://github.com/Catlandor/ImagePicker/pull/102)
+### 🪅 Other Changes
+* Bump version to 3.0.0 by [@Catlandor](https://github.com/Catlandor) in [#103](https://github.com/Catlandor/ImagePicker/pull/103)
+=> 3.0.0 as a major version, since the [min. SDK version was raised from 21 to 23](https://github.com/Catlandor/ImagePicker/pull/94)
+
+**Full Changelog**: https://github.com/Catlandor/ImagePicker/compare/2.5.1...3.0.0
+
+[Changes][3.0.0]
+
+
 <a id="2.5.1"></a>
 # [2.5.1](https://github.com/Catlandor/ImagePicker/releases/tag/2.5.1) - 2025-08-16
-
-<!-- Release notes generated using configuration in .github/release.yml at main -->
 
 ## What's Changed
 ### ✨ Improvements
@@ -141,13 +190,14 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 [Changes][2.3.23]
 
 
+[3.0.0]: https://github.com/Catlandor/ImagePicker/compare/2.5.1...3.0.0
 [2.5.1]: https://github.com/Catlandor/ImagePicker/compare/2.5.0...2.5.1
 [2.5.0]: https://github.com/Catlandor/ImagePicker/compare/2.4.1...2.5.0
 [2.4.1]: https://github.com/Catlandor/ImagePicker/compare/2.4.0...2.4.1
 [2.4.0]: https://github.com/Catlandor/ImagePicker/compare/2.3.23...2.4.0
 [2.3.23]: https://github.com/Catlandor/ImagePicker/tree/2.3.23
 
-<!-- Generated by https://github.com/rhysd/changelog-from-release v3.9.0 -->
+<!-- Generated by https://github.com/rhysd/changelog-from-release v3.9.1 -->
 # [2.3.22] - 2022-12-19
 
 * NullPointerException in callback (Special Thanks to [Catlandor](https://github.com/Catlandor))
