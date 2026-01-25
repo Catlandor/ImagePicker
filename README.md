@@ -3,7 +3,7 @@
 ![Maven Central Version](https://img.shields.io/maven-central/v/io.github.catlandor/ImagePicker)
 [![ImagePicker CI](https://github.com/Catlandor/ImagePicker/actions/workflows/android.yml/badge.svg)](https://github.com/Catlandor/ImagePicker/actions/workflows/android.yml)
 [![Releases](https://img.shields.io/github/release/catlandor/imagePicker/all.svg?style=flat-square)](https://github.com/catlandor/ImagePicker/releases)
-[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
+![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat)
 ![Language](https://img.shields.io/badge/language-Kotlin-orange.svg)
 ![Kotlin Version](https://kotlin-version.aws.icerock.dev/kotlin-version?group=io.github.catlandor&name=ImagePicker)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -243,6 +243,9 @@ ImagePicker
 
     <!-- Color of the lines for the progress wheel (e.g. for zooming in) -->
     <color name="ucrop_color_progress_wheel_line">@color/ucrop_color_ebony_clay</color>
+
+    <!-- Background color of the progress wheel -->
+    <color name="ucrop_color_wrapper_controls">@color/purple_500</color>
 </resources>
 ```
 
