@@ -2,14 +2,13 @@ import com.vanniktech.maven.publish.AndroidMultiVariantLibrary
 
 plugins {
     id "com.android.library"
-    id "kotlin-android"
     id "com.vanniktech.maven.publish" version "0.36.0"
 }
 
 apply from: "../ktlint.gradle"
 
 android {
-    compileSdk 36
+    compileSdkVersion 36
     defaultConfig {
         multiDexEnabled true
         minSdkVersion 23
@@ -33,19 +32,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17
-    }
-    lintOptions {
+    namespace 'io.github.catlandor.imagepicker'
+    lint {
         disable 'MissingTranslation'
     }
-    namespace 'io.github.catlandor.imagepicker'
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
     implementation 'androidx.core:core-ktx:1.17.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'

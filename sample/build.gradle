@@ -1,6 +1,6 @@
-apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
+plugins {
+    id 'com.android.application'
+}
 
 apply from: "../ktlint.gradle"
 
@@ -27,7 +27,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdk 36
+    compileSdkVersion 36
     defaultConfig {
         signingConfig signingConfigs.debug
         applicationId "io.github.catlandor.imagepicker.sample"
@@ -64,13 +64,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17
-    }
-    lintOptions {
+    namespace 'io.github.catlandor.imagepicker.sample'
+    lint {
         disable 'MissingTranslation'
     }
-    namespace 'io.github.catlandor.imagepicker.sample'
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 dependencies {
