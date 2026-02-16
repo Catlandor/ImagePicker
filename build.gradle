@@ -14,7 +14,7 @@ buildscript {
         maven { url 'https://repo.grails.org/grails/core/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:9.0.0'
+        classpath 'com.android.tools.build:gradle:9.0.1'
     }
 }
 
