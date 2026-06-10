@@ -27,12 +27,12 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 36
+    compileSdkVersion 37
     defaultConfig {
         signingConfig signingConfigs.debug
         applicationId "io.github.catlandor.imagepicker.sample"
         minSdkVersion 23
-        targetSdkVersion 36
+        targetSdkVersion 37
         multiDexEnabled true
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
@@ -76,7 +76,6 @@ kotlin {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.4.0"
 
     implementation 'androidx.core:core-ktx:1.19.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'

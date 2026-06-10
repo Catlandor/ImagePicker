@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Note: In order to use the view binding like this, enhance your
-        // module gradle settings within the android section with following
+        // module Gradle settings within the android section with following
         // setting:
         // buildFeatures {
         //    viewBinding true
@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
                     imgGalleryView.setLocalImage(uri)
                 } else if (it.data?.hasExtra(ImagePicker.MULTIPLE_FILES_PATH)!!) {
                     val files = ImagePicker.getAllFile(it.data) as ArrayList<Uri>
-                    if (files.size > 0) {
+                    if (files.isNotEmpty()) {
                         val uri = files[0] // first image
                         galleryUri = uri
                         imgGalleryView.setLocalImage(uri)
@@ -156,7 +156,7 @@ class MainActivity : AppCompatActivity() {
                 .setMultipleAllowed(true)
                 // .setOutputFormat(Bitmap.CompressFormat.WEBP)
                 .cropFreeStyle()
-                .galleryMimeTypes( // no gif images at all
+                .galleryMimeTypes( // no GIF images at all
                     mimeTypes =
                         arrayOf(
                             "image/png",

@@ -8,11 +8,11 @@ plugins {
 apply from: "../ktlint.gradle"
 
 android {
-    compileSdkVersion 36
+    compileSdkVersion 37
     defaultConfig {
         multiDexEnabled true
         minSdkVersion 23
-        targetSdkVersion 36
+        targetSdkVersion 37
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
