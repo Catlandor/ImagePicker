@@ -5,6 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+<a id="3.0.1"></a>
+# [3.0.1](https://github.com/Catlandor/ImagePicker/releases/tag/3.0.1) - 2026-08-17
+
+## What's Changed
+### 🪲 Bug Fixes
+* Fix IllegalAccessException crash when restoring UCropOptionsWrapper from Parcel by [@vladyslav-dovhal-quarks-tech](https://github.com/vladyslav-dovhal-quarks-tech) in [#126](https://github.com/Catlandor/ImagePicker/pull/126)
+### 🧩 Dependencies
+* Update Gradle to v9.3.1 by [@renovate](https://github.com/renovate)[bot] in [#105](https://github.com/Catlandor/ImagePicker/pull/105)
+* Update dependency org.jetbrains.kotlin:kotlin-stdlib-jdk8 to v2.3.10 by [@renovate](https://github.com/renovate)[bot] in [#106](https://github.com/Catlandor/ImagePicker/pull/106)
+* Update dependency com.android.tools.build:gradle to v9.0.1 by [@renovate](https://github.com/renovate)[bot] in [#107](https://github.com/Catlandor/ImagePicker/pull/107)
+* Update actions/upload-artifact action to v7 by [@renovate](https://github.com/renovate)[bot] in [#109](https://github.com/Catlandor/ImagePicker/pull/109)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#110](https://github.com/Catlandor/ImagePicker/pull/110)
+* Update dependency androidx.core:core-ktx to v1.18.0 by [@renovate](https://github.com/renovate)[bot] in [#111](https://github.com/Catlandor/ImagePicker/pull/111)
+* Update dependency androidx.browser:browser to v1.10.0 by [@renovate](https://github.com/renovate)[bot] in [#113](https://github.com/Catlandor/ImagePicker/pull/113)
+* Update gradle/actions action to v6 by [@renovate](https://github.com/renovate)[bot] in [#114](https://github.com/Catlandor/ImagePicker/pull/114)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#115](https://github.com/Catlandor/ImagePicker/pull/115)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#116](https://github.com/Catlandor/ImagePicker/pull/116)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#117](https://github.com/Catlandor/ImagePicker/pull/117)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#118](https://github.com/Catlandor/ImagePicker/pull/118)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#119](https://github.com/Catlandor/ImagePicker/pull/119)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#121](https://github.com/Catlandor/ImagePicker/pull/121)
+* Update actions/checkout action to v7 by [@renovate](https://github.com/renovate)[bot] in [#120](https://github.com/Catlandor/ImagePicker/pull/120)
+* Update dependency com.android.tools.build:gradle to v9.3.1 by [@renovate](https://github.com/renovate)[bot] in [#122](https://github.com/Catlandor/ImagePicker/pull/122)
+* Update Gradle to v9.7.0 by [@renovate](https://github.com/renovate)[bot] in [#124](https://github.com/Catlandor/ImagePicker/pull/124)
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#125](https://github.com/Catlandor/ImagePicker/pull/125)
+* Update actions/stale action to v11 by [@renovate](https://github.com/renovate)[bot] in [#123](https://github.com/Catlandor/ImagePicker/pull/123)
+### 🪅 Other Changes
+* Update non-major packages by [@renovate](https://github.com/renovate)[bot] in [#112](https://github.com/Catlandor/ImagePicker/pull/112)
+* Bump version to 3.0.1 by [@Catlandor](https://github.com/Catlandor) in [#127](https://github.com/Catlandor/ImagePicker/pull/127)
+
+## New Contributors
+* [@vladyslav-dovhal-quarks-tech](https://github.com/vladyslav-dovhal-quarks-tech) made their first contribution in [#126](https://github.com/Catlandor/ImagePicker/pull/126)
+
+**Full Changelog**: https://github.com/Catlandor/ImagePicker/compare/3.0.0...3.0.1
+
+[Changes][3.0.1]
+
+
 <a id="3.0.0"></a>
 # [3.0.0](https://github.com/Catlandor/ImagePicker/releases/tag/3.0.0) - 2026-01-25
 
@@ -190,6 +228,7 @@ or:
 [Changes][2.3.23]
 
 
+[3.0.1]: https://github.com/Catlandor/ImagePicker/compare/3.0.0...3.0.1
 [3.0.0]: https://github.com/Catlandor/ImagePicker/compare/2.5.1...3.0.0
 [2.5.1]: https://github.com/Catlandor/ImagePicker/compare/2.5.0...2.5.1
 [2.5.0]: https://github.com/Catlandor/ImagePicker/compare/2.4.1...2.5.0
