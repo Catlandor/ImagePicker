@@ -5,12 +5,20 @@ import android.os.Bundle
 import android.os.Parcel
 import android.os.Parcelable
 import com.yalantis.ucrop.UCrop
+import java.lang.reflect.Modifier
+
+// Static/constant fields (e.g. UCrop.Options.EXTRA_ALLOWED_GESTURES) aren't part of an
+// instance's state and reflectively writing to them throws IllegalAccessException, so they
+// must be excluded from both directions of the (de)serialization below.
+private val instanceFields =
+    UCrop.Options::class.java.declaredFields
+        .filterNot { Modifier.isStatic(it.modifiers) }
 
 class UCropOptionsWrapper(val options: UCrop.Options) : Parcelable {
     constructor(parcel: Parcel) : this(
         UCrop.Options().apply {
             // Read options from parcel dynamically
-            val fieldMap = UCrop.Options::class.java.declaredFields.associateBy { it.name }
+            val fieldMap = instanceFields.associateBy { it.name }
             fieldMap.forEach { (name, field) ->
                 field.isAccessible = true
                 try {
@@ -50,6 +58,8 @@ class UCropOptionsWrapper(val options: UCrop.Options) : Parcelable {
                     }
                 } catch (e: IllegalArgumentException) {
                     // Skip unsupported fields
+                } catch (e: IllegalAccessException) {
+                    // Skip fields that reflection isn't allowed to write (e.g. static constants)
                 }
             }
         }
@@ -57,7 +67,7 @@ class UCropOptionsWrapper(val options: UCrop.Options) : Parcelable {
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         // Write options to parcel dynamically
-        val fieldMap = UCrop.Options::class.java.declaredFields.associateBy { it.name }
+        val fieldMap = instanceFields.associateBy { it.name }
         fieldMap.forEach { (_, field) ->
             field.isAccessible = true
             try {
