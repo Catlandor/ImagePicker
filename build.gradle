@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        kotlin_version = '2.3.0'
+        kotlin_version = '2.4.21'
         versionCode = 49
         versionName = '3.0.1'
     }
@@ -14,7 +14,9 @@ buildscript {
         maven { url 'https://repo.grails.org/grails/core/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:9.5.1'
+        classpath 'com.android.tools.build:gradle:9.5.3'
+        // Overrides the Kotlin version bundled with AGP's built-in Kotlin support
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
